@@ -59,7 +59,7 @@ namespace HashTablesBST
             KeyValuePair<k, v> foundItem = default(KeyValuePair<k, v>);
             foreach (KeyValuePair<k, v> item in linkedList)
             {
-                if (item.key.Equals(key))
+                if (item.Key.Equals(key))
                 {
                     itemFound = true;
                     foundItem = item;
