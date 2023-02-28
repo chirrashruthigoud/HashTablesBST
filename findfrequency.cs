@@ -35,9 +35,9 @@ namespace HashTablesBST
             LinkedList<KeyValuePair<k, v>> linkedList = GetLinkedList(position);
             foreach (KeyValuePair<k, v> item in linkedList)
             {
-                if (item.Key.Equals(key))
+                if (item.key.Equals(key))
                 {
-                    return item.Value;
+                    return item.value;
                 }
             }
             return default(v);
@@ -47,7 +47,7 @@ namespace HashTablesBST
         {
             int position = GetArrayPosition(key);
             LinkedList<KeyValuePair<k, v>> linkedList = GetLinkedList(position);
-            KeyValuePair<k, v> item = new KeyValuePair<k, v>() { Key = key, Value = value };
+            KeyValuePair<k, v> item = new KeyValuePair<k, v>() { key = key, value = value };
             linkedList.AddLast(item);
         }
 
@@ -59,7 +59,7 @@ namespace HashTablesBST
             KeyValuePair<k, v> foundItem = default(KeyValuePair<k, v>);
             foreach (KeyValuePair<k, v> item in linkedList)
             {
-                if (item.Key.Equals(key))
+                if (item.key.Equals(key))
                 {
                     itemFound = true;
                     foundItem = item;
